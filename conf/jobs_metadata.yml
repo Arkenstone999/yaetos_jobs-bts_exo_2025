@@ -474,7 +474,7 @@ common_params:
     aws_modes: ['dev_EMR','prod_EMR']
   mode_specific_params:
     prod_EMR:
-      root_path: s3://mylake-prod  # don't add '/' at the end
+      root_path: s3://mylake-dev-v10  # don't add '/' at the end
       schema: frontroom
       emr_core_instances: 0
       aws_config_file:  conf/aws_config.cfg
@@ -485,11 +485,11 @@ common_params:
       save_schemas: False
       manage_git_info: True
     dev_EMR:
-      root_path: s3://mylake-dev-testap2  # don't add '/' at the end
+      root_path: s3://mylake-dev-v10  # don't add '/' at the end
       schema: sandbox
       emr_core_instances: 0
       aws_config_file:  conf/aws_config.cfg
-      aws_setup:        dev_BTS
+      aws_setup:        dev
       jobs_folder:      jobs/
       load_connectors: none
       enable_db_push: False
